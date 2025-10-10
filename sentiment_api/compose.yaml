@@ -1,0 +1,17 @@
+services:
+  sentiment:
+    build: .
+    container_name: moneygrowai-sentiment
+    ports: ['5002:5002']
+    environment:
+      - HF_HOME=/models
+    volumes:
+      - sentiment_models:/models
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1g
+
+volumes:
+  sentiment_models:
