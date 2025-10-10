@@ -1,0 +1,41 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Sentiment API (FastAPI)",
+      "type": "python",
+      "request": "launch",
+      "module": "uvicorn",
+      "justMyCode": false,
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "args": [
+        "sentiment_api.main:app",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8000",
+        "--reload"
+      ]
+    },
+    {
+      "name": "Sentiment API (Make run)",
+      "type": "python",
+      "request": "launch",
+      "program": "${command:python.interpreterPath}",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "args": [
+        "-m",
+        "uvicorn",
+        "sentiment_api.main:app",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8000"
+      ],
+      "preLaunchTask": "sentiment-api: run (make)"
+    }
+  ]
+}

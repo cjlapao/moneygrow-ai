@@ -1,0 +1,12 @@
+services:
+  ticker_discovery:
+    build: .
+    container_name: moneygrowai-ticker-discovery
+    ports: ['5005:5005']
+    environment:
+      - PYTHONUNBUFFERED=1
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512m

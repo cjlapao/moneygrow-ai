@@ -1,0 +1,12 @@
+services:
+  article_extractor:
+    build: .
+    container_name: moneygrowai-article-extractor
+    ports: ['5003:5003']
+    environment:
+      - PYTHONUNBUFFERED=1
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512m

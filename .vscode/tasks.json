@@ -1,0 +1,65 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "sentiment-api: install",
+      "type": "shell",
+      "command": "make",
+      "args": ["install"],
+      "options": {
+        "cwd": "${workspaceFolder}/sentiment_api"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "sentiment-api: run (make)",
+      "type": "shell",
+      "command": "make",
+      "args": ["run"],
+      "options": {
+        "cwd": "${workspaceFolder}/sentiment_api"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "sentiment-api: run-dev",
+      "type": "shell",
+      "command": "make",
+      "args": ["run-dev"],
+      "options": {
+        "cwd": "${workspaceFolder}/sentiment_api"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "sentiment-api: test",
+      "type": "shell",
+      "command": "make",
+      "args": ["test"],
+      "options": {
+        "cwd": "${workspaceFolder}/sentiment_api"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "sentiment-api: docker-build",
+      "type": "shell",
+      "command": "make",
+      "args": ["docker-build"],
+      "options": {
+        "cwd": "${workspaceFolder}/sentiment_api"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "sentiment-api: docker-run",
+      "type": "shell",
+      "command": "make",
+      "args": ["docker-run"],
+      "options": {
+        "cwd": "${workspaceFolder}/sentiment_api"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

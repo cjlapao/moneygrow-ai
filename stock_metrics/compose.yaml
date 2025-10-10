@@ -1,0 +1,12 @@
+services:
+  stock_metrics:
+    build: .
+    container_name: moneygrowai-stock-metrics
+    ports: ['5004:5004']
+    environment:
+      - PYTHONUNBUFFERED=1
+    deploy:
+      resources:
+        limits:
+          cpus: '1.5'
+          memory: 1g
