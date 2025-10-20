@@ -3,6 +3,7 @@ services:
     build: .
     container_name: moneygrowai-ticker-discovery
     ports: ['5005:5005']
+    restart: unless-stopped
     environment:
       - PYTHONUNBUFFERED=1
     deploy:

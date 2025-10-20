@@ -3,6 +3,7 @@ services:
     build: .
     container_name: moneygrowai-sentiment
     ports: ['5002:5002']
+    restart: unless-stopped
     environment:
       - HF_HOME=/models
     volumes:

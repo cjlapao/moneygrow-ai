@@ -1,8 +1,10 @@
+name: moneygrowai
 services:
   sentiment:
     build: ./sentiment_api
     container_name: moneygrowai-sentiment
     ports: ['5002:5002']
+    restart: unless-stopped
     environment:
       - HF_HOME=/models
     volumes:
@@ -17,6 +19,7 @@ services:
     build: ./article_extractor
     container_name: moneygrowai-article-extractor
     ports: ['5003:5003']
+    restart: unless-stopped
     environment:
       - PYTHONUNBUFFERED=1
     deploy:
@@ -29,6 +32,7 @@ services:
     build: ./stock_metrics
     container_name: moneygrowai-stock-metrics
     ports: ['5004:5004']
+    restart: unless-stopped
     environment:
       - PYTHONUNBUFFERED=1
     deploy:
@@ -41,6 +45,7 @@ services:
     build: ./ticker_discovery
     container_name: moneygrowai-ticker-discovery
     ports: ['5005:5005']
+    restart: unless-stopped
     environment:
       - PYTHONUNBUFFERED=1
     deploy:
